@@ -47,10 +47,10 @@
                             <!-- <li class="menu-item">
                                 <a href=""><span class="menu-icon event"></span> Event Bookings</a>
                             </li> -->
-                            <li class="menu-item ">
+                            <li class="menu-item active">
                                 <a href=""><span class="menu-icon event"></span> Virtual Event Bookings</a>
                             </li>
-                            <li class="menu-item active">
+                            <li class="menu-item">
                                 <a href="change-password.html"><span class="menu-icon password"></span> Change Password</a>
                             </li>
                         </ul>
@@ -116,37 +116,80 @@
                         <div class="row">
                             <div class="col-xxl-11 mx-auto">
                                 <div class="content">
-                                    <h4 class="page-heading">Change Password</h4>
+                                    <h4 class="page-heading">Karoke Idols Virtual Contest</h4>
                                     <div class="custom-card mt-4">
-                                        <form action="" class="my-4" id="change-password">
-                                            <div class="form-floating mb-3 auth-inputs">
-                                                <input type="text" class="form-control" id="current-password" name="current-password" placeholder="John Doe">
-                                                <label for="current-password">Current Password*</label>
-                                            </div>
+                                        <form action="" class="my-4" id="signup-form">
+                                            <label class="upload-img">
+                                                <img src="assets/img/profile-pic.png" alt="">
+                                                <input type="file" hidden>
+                                                <div class="edit-icon-circle">
+                                                    <div class="icon edit-icon"></div>
+                                                </div>
+                                            </label>
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-floating mb-3 auth-inputs">
-                                                        <input type="text" class="form-control" id="new-password" name="new-password" placeholder="John Doe">
-                                                        <label for="new-password">New Password*</label>
+                                                        <input type="text" class="form-control" id="full-name" name="full-name" placeholder="John Doe">
+                                                        <label for="full-name">Full Name*</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-floating mb-3 auth-inputs">
-                                                        <input type="text" class="form-control" id="confirmt-password" name="confirmt-password" placeholder="John Doe">
-                                                        <label for="confirmt-password">Confirm Password*</label>
+                                                        <input type="email" class="form-control" id="email" name="email" placeholder="John Doe">
+                                                        <label for="email">Email*</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-floating mb-3 auth-inputs">
+                                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="John Doe">
+                                                        <label for="phone">Phone*</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-floating mb-3 auth-inputs">
+                                                        <select id="country" name="country" class="form-select" placeholder="John Doe" aria-placeholder="select country">
+                                                            <option value="" hidden selected>Select Country</option>
+                                                            <option value="Pakistan">Pakistan</option>
+                                                            <option value="us">United State</option>
+                                                        </select>
+                                                        <label for="country">Country*</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-floating mb-3 auth-inputs">
+                                                        <select id="state" name="state" class="form-select" placeholder="John Doe" aria-placeholder="select state">
+                                                            <option value="" hidden selected>Select State</option>
+                                                            <option value="Pakistan">Pakistan</option>
+                                                            <option value="us">United State</option>
+                                                        </select>
+                                                        <label for="state">State*</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-floating mb-3 auth-inputs">
+                                                        <select id="city" name="city" class="form-select" placeholder="John Doe" aria-placeholder="select City">
+                                                            <option value="" hidden selected>Select City</option>
+                                                            <option value="Pakistan">Pakistan</option>
+                                                            <option value="us">United State</option>
+                                                        </select>
+                                                        <label for="city">City*</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-floating mb-3 auth-inputs">
+                                                        <input type="text" class="form-control" id="street" name="street" placeholder="John Doe">
+                                                        <label for="street">Street*</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+                                         
                                             <div class="text-center mt-5">
                                                 <button class="auth-btn">
                                                     <img src="assets/img/mic.svg" alt="">
                                                     Update
                                                 </button>
                                             </div>
-                                            <div class="text-center mt-4">
-                                                <a href="signup.html" class="go-back">Go Back</a>
-                                            </div>
+                                            
                                         </form>
                                     </div>
                                 </div>
@@ -170,5 +213,14 @@
     <script src="assets/@form-validation/popular.js"></script>
     <script src="assets/@form-validation/bootstrap5.js"></script>
     <script src="assets/@form-validation/auto-focus.js"></script>
+    <script src="assets/js/booking-form.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#catagory').select2();
+            $('#events').select2();
+            // $('#city').select2();
+        });
+    </script>
 </body>
 </html>

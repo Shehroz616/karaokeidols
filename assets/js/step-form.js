@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
             introduction: {
                 validators: {
                     notEmpty: {
-                        message: 'Please select the country'
+                        message: 'Please type your self introduction'
                     }
                 },
             }

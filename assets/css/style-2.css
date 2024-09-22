@@ -1099,3 +1099,32 @@ input[name="singer-type"]:checked~.radio-circle{
     width: 25px;
     height: 25px;
   }
+  .upload-img{
+    display: block;
+    cursor: pointer;
+    width: max-content;
+    margin: auto;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .upload-img img{
+    width: 80px;
+    border-radius: 50%;
+  }
+  .upload-img .edit-icon-circle{
+      position: absolute;
+      top: -5%;
+      right: 0;
+      background-color: #009B3A;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .upload-img .edit-icon{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+  }
