@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karaokeidols | Dashboard</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style-2.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="layout-wrapper">
+        <div class="layout-container">
+            <aside id="layout-menu" class="layout-menu"> 
+                <div class="app-brand">
+                    <a href="index.html" class="app-brand-link">
+                        <span class="app-brand-logo">
+                            <img src="assets/img/logo.png"  class="full-logo d-none d-xl-block" alt="">
+                            <img src="assets/img/favicon.png" class="d-xl-none logo-icon" alt="">
+                        </span>
+                    </a>
+                </div>
+                <ul class="menu-inner">
+                    <!-- <li class="generation">
+                        <a href="javascript:void(0);">
+                            <span>Dashborad</span>
+                            <div class="icon-circle menu-toggle"><span class="arrow-left"></span></div>
+                        </a>
+                    </li> -->
+                    <li class="menu-group">
+                        <ul>
+                            <li class="menu-item active">
+                                <a href=""><span class="menu-icon dashboard-icon"></span> Dashborad</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-group">
+                        <ul>
+                            <!-- <li class="menu-item">
+                                <a href=""><span class="menu-icon book"></span> Book a Venue</a>
+                            </li> -->
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon book"></span> Book a Virtual Contest</a>
+                            </li>
+                            <!-- <li class="menu-item">
+                                <a href=""><span class="menu-icon event"></span> Event Bookings</a>
+                            </li> -->
+                            <li class="menu-item">
+                                <a href="virtual-event.html"><span class="menu-icon event"></span> Virtual Event Bookings</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon password"></span> Change Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-group">
+                        <ul>
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon edit-profile"></span> Edit Profile</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon logout"></span> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <div class="layout-page">
+                <nav class="layout-navbar">
+                    <div class="top-app-brand">
+                        <a href="index.html" class="app-brand-link">
+                            <span class="app-brand-logo">
+                                <img src="assets/img/logo.png" class="" alt="">
+                            </span>
+                        </a>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="notification-button">
+                                <span class="menu-icon bell-fill"></span>
+                            </div>
+                        </li>
+                        <li class="position-relative">
+                            <div class="profile-box">
+                                <img src="assets/img/profile-pic.png" class="profile-pic"  alt="">
+                            </div>
+                            <div class="top-menu-btn">
+                                <div class="menu-btn" onclick="toggleDropdown()">
+                                    <span class="menu-icon menu-bars"></span>
+                                </div>
+                            </div>
+                            <div id="profile-dropdown" class="dropdown-content">
+                                <div class="dropdown-profile">
+                                    <img src="assets/img/profile-pic.png" alt="Profile Image" class="profile-img">
+                                    <div class="profile-info">
+                                        <p>jon Doe</p>
+                                        <span>admin</span>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li><a href="#"><span class="menu-icon setting"></span>Setting</a></li>
+                                </ul>
+                                <hr>
+                                <ul>
+                                    <li><a href="#"><span class="menu-icon logout"></span> Logout</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="content-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xxl-11 mx-auto">
+                                <div class="content">
+                                    <h4 class="page-heading">Account Information</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mobile-arrow">
+        <span class="icon arrow-right"></span>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/menu.js"></script>
+</body>
+</html>

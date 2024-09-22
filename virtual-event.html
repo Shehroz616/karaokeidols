@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karaokeidols | Dashboard</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style-2.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="layout-wrapper">
+        <div class="layout-container">
+            <aside id="layout-menu" class="layout-menu"> 
+                <div class="app-brand">
+                    <a href="index.html" class="app-brand-link">
+                        <span class="app-brand-logo">
+                            <img src="assets/img/logo.png"  class="full-logo d-none d-xl-block" alt="">
+                            <img src="assets/img/favicon.png" class="d-xl-none logo-icon" alt="">
+                        </span>
+                    </a>
+                </div>
+                <ul class="menu-inner">
+                    <!-- <li class="generation">
+                        <a href="javascript:void(0);">
+                            <span>Dashborad</span>
+                            <div class="icon-circle menu-toggle"><span class="arrow-left"></span></div>
+                        </a>
+                    </li> -->
+                    <li class="menu-group">
+                        <ul>
+                            <li class="menu-item active">
+                                <a href=""><span class="menu-icon dashboard-icon"></span> Dashborad</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-group">
+                        <ul>
+                            <!-- <li class="menu-item">
+                                <a href=""><span class="menu-icon book"></span> Book a Venue</a>
+                            </li> -->
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon book"></span> Book a virtual Contest</a>
+                            </li>
+                            <!-- <li class="menu-item">
+                                <a href=""><span class="menu-icon event"></span> Event Bookings</a>
+                            </li> -->
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon event"></span> Virtual Event Bookings</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon password"></span> Change Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-group">
+                        <ul>
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon edit-profile"></span> Edit Profile</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href=""><span class="menu-icon logout"></span> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <div class="layout-page">
+                <nav class="layout-navbar">
+                    <div class="top-app-brand">
+                        <a href="index.html" class="app-brand-link">
+                            <span class="app-brand-logo">
+                                <img src="assets/img/logo.png" class="" alt="">
+                            </span>
+                        </a>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="notification-button">
+                                <span class="menu-icon bell-fill"></span>
+                            </div>
+                        </li>
+                        <li class="position-relative">
+                            <div class="profile-box">
+                                <img src="assets/img/profile-pic.png" class="profile-pic"  alt="">
+                            </div>
+                            <div class="top-menu-btn">
+                                <div class="menu-btn" onclick="toggleDropdown()">
+                                    <span class="menu-icon menu-bars"></span>
+                                </div>
+                            </div>
+                            <div id="profile-dropdown" class="dropdown-content">
+                                <div class="dropdown-profile">
+                                    <img src="assets/img/profile-pic.png" alt="Profile Image" class="profile-img">
+                                    <div class="profile-info">
+                                        <p>jon Doe</p>
+                                        <span>admin</span>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li><a href="#"><span class="menu-icon setting"></span>Setting</a></li>
+                                </ul>
+                                <hr>
+                                <ul>
+                                    <li><a href="#"><span class="menu-icon logout"></span> Logout</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="content-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xxl-11 mx-auto">
+                                <div class="content">
+                                    <h4 class="page-heading">Karoke Idols Virtual Contest</h4>
+                                    <div class="custom-card mt-4">
+                                        <form action="" class="my-4" id="signup-form">
+                                            <div class="steps step-1">
+                                                <div class="text-center">
+                                                    <label for="">Are you a Solo or Duet?</label>
+                                                    <div class="custom-radios-container my-4">
+                                                        <label class="radio-box">
+                                                            <i class="icon solo-icon"></i>
+                                                            <input type="radio" name="singer-type" hidden>
+                                                            <div class="radio-circle"></div>
+                                                        </label>
+                                                        <label class="radio-box">
+                                                            <i class="icon duo-icon"></i>
+                                                            <input type="radio" name="singer-type" hidden>
+                                                            <div class="radio-circle"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="text-center mt-5">
+                                                    <button class="auth-btn">
+                                                        <img src="assets/img/mic.svg" alt="">
+                                                        Continue
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="steps step-2 hidden">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-floating mb-3 auth-inputs">
+                                                            <input type="text" class="form-control" id="song-title" name="song-title" placeholder="John Doe">
+                                                            <label for="song-title">Song Title*</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-floating mb-3 auth-inputs">
+                                                            <input type="text" class="form-control" id="song-artist" name="song-artist" placeholder="John Doe">
+                                                            <label for="song-artist">Song Artist*</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-floating mb-3 auth-inputs">
+                                                    <input type="text" class="form-control" id="video-url" name="video-url" placeholder="John Doe">
+                                                    <label for="video-url">Video URL*</label>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Here</a></p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Here</a></p>
+                                                <div class="text-center mt-5">
+                                                    <button class="auth-btn">
+                                                        <img src="assets/img/mic.svg" alt="">
+                                                        Continue
+                                                    </button>
+                                                </div>
+                                                <div class="text-center mt-4">
+                                                    <a href="signup.html" class="go-back">Go Back</a>
+                                                </div>
+                                            </div>
+                                            <div class="steps step-3 hidden">
+                                                <div class="d-flex gap-2">
+                                                    <h4>Total Price</h4>
+                                                    <h4>20$</h4>
+                                                </div>
+                                                <a href="#" class="stripe-connect"><span>Pay With</span></a>
+                                                <div class="text-center">
+                                                    <button class="auth-btn">
+                                                        <img src="assets/img/mic.svg" alt="">
+                                                        Continue
+                                                    </button>
+                                                </div>
+                                                <div class="text-center mt-4">
+                                                    <a href="signup.html" class="go-back">Go Back</a>
+                                                </div>
+                                            </div>
+                                            <div class="steps step-4 hidden">
+                                                <div class="mb-3">
+                                                    <label for="">Do you want to register in an event</label>
+                                                </div>
+                                                
+                                                <div class="text-center">
+                                                    <button class="auth-btn">
+                                                        <img src="assets/img/mic.svg" alt="">
+                                                        Continue
+                                                    </button>
+                                                </div>
+                                                <div class="text-center mt-4">
+                                                    <a href="signup.html" class="go-back">Go Back</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mobile-arrow">
+        <span class="icon arrow-right"></span>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/select2.full.min.js"></script>
+    <script src="assets/@form-validation/popular.js"></script>
+    <script src="assets/@form-validation/bootstrap5.js"></script>
+    <script src="assets/@form-validation/auto-focus.js"></script>
+    <script src="assets/js/booking-form.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#catagory').select2();
+            $('#events').select2();
+            // $('#city').select2();
+        });
+    </script>
+</body>
+</html>
