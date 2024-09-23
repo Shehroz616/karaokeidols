@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>karaokeidols | Dashboard</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style-2.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.css">
     <link rel="stylesheet" href="assets/css/icons.css">
-    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/style-2.css">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 </head>
 <body>
@@ -31,8 +31,8 @@
                     </li> -->
                     <li class="menu-group">
                         <ul>
-                            <li class="menu-item">
-                                <a href="dashboard.html"><span class="menu-icon dashboard-icon"></span> Dashborad</a>
+                            <li class="menu-item ">
+                                <a href=""><span class="menu-icon dashboard-icon"></span> Dashborad</a>
                             </li>
                         </ul>
                     </li>
@@ -42,15 +42,15 @@
                                 <a href=""><span class="menu-icon book"></span> Book a Venue</a>
                             </li> -->
                             <li class="menu-item">
-                                <a href="book-virtual-event.html"><span class="menu-icon book"></span> Book a virtual Contest</a>
+                                <a href="book-virtual-event.html"><span class="menu-icon book"></span> Book a Virtual Contest</a>
                             </li>
                             <!-- <li class="menu-item">
                                 <a href=""><span class="menu-icon event"></span> Event Bookings</a>
                             </li> -->
-                            <li class="menu-item ">
+                            <li class="menu-item active">
                                 <a href="virtual-event-bookings.html"><span class="menu-icon event"></span> Virtual Event Bookings</a>
                             </li>
-                            <li class="menu-item active">
+                            <li class="menu-item">
                                 <a href="change-password.html"><span class="menu-icon password"></span> Change Password</a>
                             </li>
                         </ul>
@@ -116,38 +116,51 @@
                         <div class="row">
                             <div class="col-xxl-11 mx-auto">
                                 <div class="content">
-                                    <h4 class="page-heading">Change Password</h4>
+                                    <h4 class="page-heading">Account Information</h4>
                                     <div class="custom-card mt-4">
-                                        <form action="" class="my-4" id="change-password">
-                                            <div class="form-floating mb-3 auth-inputs">
-                                                <input type="text" class="form-control" id="current-password" name="current-password" placeholder="John Doe">
-                                                <label for="current-password">Current Password*</label>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="form-floating mb-3 auth-inputs">
-                                                        <input type="text" class="form-control" id="new-password" name="new-password" placeholder="John Doe">
-                                                        <label for="new-password">New Password*</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-floating mb-3 auth-inputs">
-                                                        <input type="text" class="form-control" id="confirmt-password" name="confirmt-password" placeholder="John Doe">
-                                                        <label for="confirmt-password">Confirm Password*</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="text-center mt-5">
-                                                <button class="auth-btn">
-                                                    <img src="assets/img/mic.svg" alt="">
-                                                    Update
-                                                </button>
-                                            </div>
-                                            <div class="text-center mt-4">
-                                                <a href="signup.html" class="go-back">Go Back</a>
-                                            </div>
-                                        </form>
+                                        <table id="example" class="display">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Venue</th>
+                                                    <th>Type</th>
+                                                    <th>Performance Date</th>
+                                                    <th>Song Title</th>
+                                                    <th>Song Artist	</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tiger</td>
+                                                    <td>Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011-04-25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tiger</td>
+                                                    <td>Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011-04-25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tiger</td>
+                                                    <td>Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011-04-25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -166,9 +179,11 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/select2.full.min.js"></script>
-    <script src="assets/@form-validation/popular.js"></script>
-    <script src="assets/@form-validation/bootstrap5.js"></script>
-    <script src="assets/@form-validation/auto-focus.js"></script>
+    <script src="https://cdn.datatables.net/2.1.7/js/dataTables.js"></script>
+    <script>
+        new DataTable('#example', {
+            scrollX: true
+        });
+    </script>
 </body>
 </html>
