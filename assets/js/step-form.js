@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         message: 'Your name must be more than 8 characters long',
                     },
                 },
-            }
+            },
+            
         },
         plugins: {
             trigger: new FormValidation.plugins.Trigger(),
@@ -66,47 +67,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const step2 = FormValidation.formValidation(document.querySelector('.step-2'), {
         fields: {
+            'user-img':{
+                validators: {
+                    file: {
+                        extension: 'jpg,png,jpeg',
+                        type: 'image/jpeg,image/png,image/jpeg',
+                        message: 'Please select a valid PNG, JPG and jpeg file'
+                    }
+                }
+            },
             phone: {
                 validators: {
                     notEmpty: {
                         message: 'Please enter phone number',
                     },
-                    stringLength: {
-                        max: 30,
-                        message: 'Your name must be less than 30 characters long',
-                    },
                     regexp: {
                         regexp: /^[0-9]+$/,
-                        message: 'The phone can only consist of numbers',
+                        message: 'Your phone can only consist of  numbers only',
                     },
                 },
             },
             country: {
                 validators: {
                     notEmpty: {
-                        message: 'Please select the country'
-                    }
-                },
-            },
-            state: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please select the state'
-                    }
-                },
-            },
-            city: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please select the city'
-                    }
-                },
-            },
-            street: {
-                validators: {
-                    notEmpty: {
                         message: 'Please select the street'
-                    }
+                    }, 
                 },
             }
         },
@@ -116,60 +101,28 @@ document.addEventListener('DOMContentLoaded', function () {
               // Use this for enabling/changing valid/invalid class
               // eleInvalidClass: '',
               eleValidClass: '',
-              rowSelector: '.form-floating'
+              rowSelector: '.auth-inputs'
             }),
             autoFocus: new FormValidation.plugins.AutoFocus(),
             submitButton: new FormValidation.plugins.SubmitButton()
         },
         init: instance => {
             instance.on('plugins.message.placed', function (e) {
-              if (e.element.parentElement.classList.contains('input-group')) {
+                if (e.element.parentElement.classList.contains('input-group')) {
+                    e.element.parentElement.insertAdjacentElement('afterend', e.messageElement);
+                }
+                if (e.element.parentElement.classList.contains('upload-img')) {
+                    console.log(e.element.parentElement)
                 e.element.parentElement.insertAdjacentElement('afterend', e.messageElement);
               }
             });
           }
     }).on('core.form.valid', function () {
+        alert("submited")
         if (currentStep < steps.length - 1) {
-            currentStep++;
-            showStep(currentStep);
         }
     });
 
-    const step3 = FormValidation.formValidation(document.querySelector('.step-3'), {
-        fields: {
-            
-            introduction: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please type your self introduction'
-                    }
-                },
-            }
-        },
-        plugins: {
-            trigger: new FormValidation.plugins.Trigger(),
-            bootstrap5: new FormValidation.plugins.Bootstrap5({
-              // Use this for enabling/changing valid/invalid class
-              // eleInvalidClass: '',
-              eleValidClass: '',
-              rowSelector: '.form-floating'
-            }),
-            autoFocus: new FormValidation.plugins.AutoFocus(),
-            submitButton: new FormValidation.plugins.SubmitButton()
-        },
-        init: instance => {
-            instance.on('plugins.message.placed', function (e) {
-              if (e.element.parentElement.classList.contains('input-group')) {
-                e.element.parentElement.insertAdjacentElement('afterend', e.messageElement);
-              }
-            });
-          }
-    }).on('core.form.valid', function () {
-        if (currentStep < steps.length - 1) {
-            currentStep++;
-            showStep(currentStep);
-        }
-    });
 
     const steps = document.querySelectorAll(".steps");
     let currentStep = 0;
@@ -200,6 +153,18 @@ document.addEventListener('DOMContentLoaded', function () {
     
                 case 2:
                     step3.validate();
+                  break;
+
+                case 3:
+                    step4.validate();
+                  break;
+
+                case 4:
+                    step5.validate();
+                  break;
+    
+                case 5:
+                    step6.validate();
                   break;
     
                 default:

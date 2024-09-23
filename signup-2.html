@@ -35,10 +35,7 @@
                         <input type="password" class="form-control" id="password" name="password" placeholder="password">
                         <label for="password">Password*</label>
                     </div>
-                    <div class="form-floating mb-3 auth-inputs">
-                        <input type="number" class="form-control" id="phone" name="phone" placeholder="John Doe">
-                        <label for="phone">Phone*</label>
-                    </div>
+                    
                     <div class="text-center">
                         <button class="auth-btn">
                             <img src="assets/img/mic.svg" alt="">
@@ -50,6 +47,17 @@
                     </div>
                 </div>
                 <div class="steps step-2 hidden">
+                    <label class="upload-img auth-inputs">
+                        <img src="assets/img/profile-pic.png" alt="">
+                        <input type="file" name="user-img" hidden>
+                        <div class="edit-icon-circle">
+                            <div class="icon edit-icon"></div>
+                        </div>
+                    </label>
+                    <div class="form-floating my-3 auth-inputs">
+                        <input type="number" class="form-control" id="phone" name="phone" placeholder="John Doe">
+                        <label for="phone">Phone*</label>
+                    </div>
                     <div class="form-floating mb-3 auth-inputs">
                         <select id="country" name="country" class="form-select" placeholder="John Doe" aria-placeholder="select country">
                             <option value="" hidden selected>Select Country</option>
@@ -58,68 +66,10 @@
                         </select>
                         <label for="country">Country*</label>
                     </div>
-                    <div class="form-floating mb-3 auth-inputs">
-                        <select id="state" name="state" class="form-select" placeholder="John Doe" aria-placeholder="select state">
-                            <option value="" hidden selected>Select State</option>
-                            <option value="Pakistan">Pakistan</option>
-                            <option value="us">United State</option>
-                        </select>
-                        <label for="state">State*</label>
-                    </div>
-                    <div class="form-floating mb-3 auth-inputs">
-                        <select id="city" name="city" class="form-select" placeholder="John Doe" aria-placeholder="select City">
-                            <option value="" hidden selected>Select City</option>
-                            <option value="Pakistan">Pakistan</option>
-                            <option value="us">United State</option>
-                        </select>
-                        <label for="city">City*</label>
-                    </div>
-                    <div class="form-floating mb-3 auth-inputs">
-                        <input type="text" class="form-control" id="street" name="street" placeholder="John Doe">
-                        <label for="street">Street*</label>
-                    </div>
-                    <div class="text-center">
-                        <button class="auth-btn">
-                            <img src="assets/img/mic.svg" alt="">
-                            Continue
-                        </button>
-                    </div>
-                    <div class="text-center mt-4">
-                        <a href="signup.html" class="go-back">Go Back</a>
-                    </div>
-                </div>
-                <div class="steps step-3 hidden">
-                    <div class="form-floating mb-3 auth-inputs">
-                        <textarea name="introduction" rows="5" class="form-control" id="introduction" placeholder="Self Introduction"></textarea>
-                        <label for="introduction">Self Introduction*</label>
-                    </div>
-                    <div class="text-center">
-                        <button class="auth-btn">
-                            <img src="assets/img/mic.svg" alt="">
-                            Continue
-                        </button>
-                    </div>
-                    <div class="text-center mt-4">
-                        <a href="signup.html" class="go-back">Go Back</a>
-                    </div>
-                </div>
-                <div class="steps step-4 hidden">
-                    <div class="text-center">
-                        <label for="">Are you a Solo or Duet?</label>
-                        <div class="custom-radios-container my-4">
-                            <label class="radio-box">
-                                <i class="icon solo-icon"></i>
-                                <input type="radio" name="singer-type" hidden>
-                                <div class="radio-circle"></div>
-                            </label>
-                            <label class="radio-box">
-                                <i class="icon duo-icon"></i>
-                                <input type="radio" name="singer-type" hidden>
-                                <div class="radio-circle"></div>
-                            </label>
-                        </div>
-                    </div>
-                    
+                    <!-- <div class="form-floating mb-3 auth-inputs">
+                        <input type="text" class="form-control" id="address" name="address" placeholder="John Doe">
+                        <label for="address">Address*</label>
+                    </div> -->
                     <div class="text-center">
                         <button class="auth-btn">
                             <img src="assets/img/mic.svg" alt="">
