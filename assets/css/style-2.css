@@ -1014,7 +1014,7 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 75px;
     height: 75px;
 }
-input[name="singer-type"]:checked~.radio-circle{
+input[name="singer_type"]:checked~.radio-circle{
     background: linear-gradient(-220deg, #009B3A 0%, #FED100 100%);
 }
 .fv-plugins-bootstrap5-row-invalid~.invalid-feedback{
@@ -1243,4 +1243,26 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-link {
 .datatables-basic tr th{
   font-family: "Poppins-medium";
   font-weight: unset;
+}
+table.dataTable.dtr-column > tbody > tr > td.control, table.dataTable.dtr-column > tbody > tr > th.control{
+  position: relative;
+}
+table.dataTable.dtr-column > tbody > tr > td.control:before, table.dataTable.dtr-column > tbody > tr > th.control:before{
+  background-color: #c32631;
+  border: 2px solid #fff;
+  box-shadow: 0 0 3px rgba(75, 70, 92, 0.8);
+  position: absolute;
+  line-height: 0.9em;
+  font-weight: 500;
+  height: 0.85em;
+  width: 0.85em;
+  color: #fff;
+  border-radius: 1em;
+  box-sizing: content-box;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  content: "+";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const step1 = FormValidation.formValidation(document.querySelector('.step-1'), {
         fields: {
-            'singer-type': {
+            'singer_type': {
                 validators: {
                     notEmpty: {
                         message: 'Please select a singer type',  // Updated message for radio buttons
