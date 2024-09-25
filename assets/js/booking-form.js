@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         message: 'Song title be less than 30 characters long',
                     },
                     regexp: {
-                        regexp: /^[a-zA-Z0-9]+$/,
+                        regexp: /^[a-zA-Z0-9 ]+$/,
                         message: 'Song title can only alphabets and number only',
                     },
                 },

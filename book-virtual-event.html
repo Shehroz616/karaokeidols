@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,15 @@
     <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 </head>
+
 <body>
     <div class="layout-wrapper">
         <div class="layout-container">
-            <aside id="layout-menu" class="layout-menu"> 
+            <aside id="layout-menu" class="layout-menu">
                 <div class="app-brand">
                     <a href="index.html" class="app-brand-link">
                         <span class="app-brand-logo">
-                            <img src="assets/img/logo.png"  class="full-logo d-none d-xl-block" alt="">
+                            <img src="assets/img/logo.png" class="full-logo d-none d-xl-block" alt="">
                             <img src="assets/img/favicon.png" class="d-xl-none logo-icon" alt="">
                         </span>
                     </a>
@@ -42,23 +44,27 @@
                                 <a href=""><span class="menu-icon book"></span> Book a Venue</a>
                             </li> -->
                             <li class="menu-item active">
-                                <a href="book-virtual-event.html"><span class="menu-icon book"></span> Book a virtual Contest</a>
+                                <a href="book-virtual-event.html"><span class="menu-icon book"></span> Book a virtual
+                                    Contest</a>
                             </li>
                             <!-- <li class="menu-item">
                                 <a href=""><span class="menu-icon event"></span> Event Bookings</a>
                             </li> -->
                             <li class="menu-item">
-                                <a href="virtual-event-bookings.html"><span class="menu-icon event"></span> Virtual Event Bookings</a>
+                                <a href="virtual-event-bookings.html"><span class="menu-icon event"></span> Virtual
+                                    Event Bookings</a>
                             </li>
                             <li class="menu-item">
-                                <a href="change-password.html"><span class="menu-icon password"></span> Change Password</a>
+                                <a href="change-password.html"><span class="menu-icon password"></span> Change
+                                    Password</a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-group">
                         <ul>
                             <li class="menu-item">
-                                <a href="edit-profile.html"><span class="menu-icon edit-profile"></span> Edit Profile</a>
+                                <a href="edit-profile.html"><span class="menu-icon edit-profile"></span> Edit
+                                    Profile</a>
                             </li>
                             <li class="menu-item">
                                 <a href="signup.html"><span class="menu-icon logout"></span> Logout</a>
@@ -84,7 +90,7 @@
                         </li>
                         <li class="position-relative">
                             <div class="profile-box">
-                                <img src="assets/img/profile-pic.png" class="profile-pic"  alt="">
+                                <img src="assets/img/profile-pic.png" class="profile-pic" alt="">
                             </div>
                             <div class="top-menu-btn">
                                 <div class="menu-btn" onclick="toggleDropdown()">
@@ -105,7 +111,7 @@
                                 <hr>
                                 <ul>
                                     <li><a href="signup.html"><span class="menu-icon logout"></span> Logout</a></li>
-                                    
+
                                 </ul>
                             </div>
                         </li>
@@ -135,7 +141,7 @@
                                                         </label>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="text-center mt-5">
                                                     <button class="auth-btn">
                                                         <img src="assets/img/mic.svg" alt="">
@@ -147,23 +153,28 @@
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-floating mb-3 auth-inputs">
-                                                            <input type="text" class="form-control" id="song-title" name="song-title" placeholder="John Doe">
+                                                            <input type="text" class="form-control" id="song-title"
+                                                                name="song-title" placeholder="John Doe">
                                                             <label for="song-title">Song Title*</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-floating mb-3 auth-inputs">
-                                                            <input type="text" class="form-control" id="song-artist" name="song-artist" placeholder="John Doe">
+                                                            <input type="text" class="form-control" id="song-artist"
+                                                                name="song-artist" placeholder="John Doe">
                                                             <label for="song-artist">Song Artist*</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-floating mb-3 auth-inputs">
-                                                    <input type="text" class="form-control" id="video-url" name="video-url" placeholder="John Doe">
+                                                    <input type="text" class="form-control" id="video-url"
+                                                        name="video-url" placeholder="John Doe">
                                                     <label for="video-url">Video URL*</label>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Here</a></p>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Here</a></p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a
+                                                        href="">Here</a></p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a
+                                                        href="">Here</a></p>
                                                 <div class="text-center mt-5">
                                                     <button class="auth-btn">
                                                         <img src="assets/img/mic.svg" alt="">
@@ -175,11 +186,46 @@
                                                 </div>
                                             </div>
                                             <div class="steps step-3 hidden">
-                                                <div class="d-flex gap-2">
-                                                    <h4>Total Price</h4>
-                                                    <h4>20$</h4>
+                                                <div class="row">
+                                                    <div class="col-lg-6 mx-auto">
+                                                        <table class="table border-top">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#</th>
+                                                                    <th class="w-50">Item</th>
+                                                                    <th class="w-25">PRICE</th>
+                                                                    <th class="w-25">QTY</th>
+                                                                    <th>Total</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td class="w-50">Virtual Event</td>
+                                                                    <td class="w-25">20$</td>
+                                                                    <td class="w-25">1</td>
+                                                                    <td>20 $</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="d-flex justify-content-end align-items-center my-3 me-3">
+                                                            <div class="order-calculations">
+                                                                <div class="d-flex justify-content-between mb-2 gap-4">
+                                                                    <h6 class="mb-0">Subtotal:</h6>
+                                                                    <h6 class="mb-0">20 $</h6>
+                                                                </div>
+                                                                <div class="d-flex justify-content-between mb-2">
+                                                                    <h6 class="mb-0">Discount:</h6>
+                                                                    <h6 class="mb-0">0 $</h6>
+                                                                </div>
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h6 class="mb-0 final-price">Total:</h6>
+                                                                    <h6 class="mb-0 final-price">20 $</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <a href="#" class="stripe-connect"><span>Pay With</span></a>
                                                 <div class="text-center">
                                                     <button class="auth-btn">
                                                         <img src="assets/img/mic.svg" alt="">
@@ -216,11 +262,12 @@
     <script src="assets/js/booking-form.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#catagory').select2();
             $('#events').select2();
             // $('#city').select2();
         });
     </script>
 </body>
+
 </html>

@@ -900,6 +900,9 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 15px;
   margin-right: 5px;
 }
+.auth-btn:disabled{
+  opacity: 0.7;
+}
 .signup-section {
   display: flex;
   align-items: center;
@@ -1109,6 +1112,8 @@ input[name="singer_type"]:checked~.radio-circle{
   }
   .upload-img img{
     width: 80px;
+    aspect-ratio: 1;
+    object-fit: cover;
     border-radius: 50%;
   }
   .upload-img .edit-icon-circle{
@@ -1265,4 +1270,10 @@ table.dataTable.dtr-column > tbody > tr > td.control:before, table.dataTable.dtr
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.table th{
+  font-family: "Poppins-medium";
+}
+.final-price{
+  font-family: "Poppins-bold";
 }

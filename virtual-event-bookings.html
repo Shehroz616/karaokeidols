@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="assets/css/style-2.css">
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/icons/tabler-icons.css">
-  <link rel="stylesheet" href="assets/icons/fontawesome.css">
-  <link rel="stylesheet" href="assets/icons/flag-icons.css">
+  <!-- <link rel="stylesheet" href="assets/icons/fontawesome.css">
+  <link rel="stylesheet" href="assets/icons/flag-icons.css"> -->
 </head>
 
 <body>
@@ -129,11 +129,11 @@
                           <tr>
                             <th></th>
                             <th>id</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Date</th>
-                            <th>Salary</th>
-                            <th>Status</th>
+                            <th>Venue</th>
+                            <th>Type</th>
+                            <th>Performance Date</th>
+                            <th>Song Title</th>
+                            <th>Song Artist</th>
                             <th>Action</th>
                           </tr>
                         </thead>
@@ -386,6 +386,7 @@
             display: $.fn.dataTable.Responsive.display.modal({
               header: function (row) {
                 var data = row.data();
+                console.log("asd",$.fn.dataTable)
                 return 'Details of ' + data['song_artist'];
               }
             }),
